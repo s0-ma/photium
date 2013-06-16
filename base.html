@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" href="./csstemplate/style.css" type="text/css">
+		<link rel="stylesheet" type="text/css" href="./highslide/highslide.css" />
+		
+		<title>%SITETITLE%</title>
+		
+		<script type="text/javascript" src="./highslide/highslide-with-gallery.js"></script>
+		<script type="text/javascript">
+			hs.graphicsDir = './highslide/graphics/';
+			hs.align = 'center';
+			hs.transitions = ['expand', 'crossfade'];
+			hs.fadeInOut = true;
+			hs.dimmingOpacity = 0.8;
+			hs.outlineType = 'rounded-white';
+			//hs.captionEval = 'this.thumb.alt';
+			hs.marginBottom = 105; // make room for the thumbstrip and the controls
+			hs.numberPosition = 'caption';
+			
+			// Add the slideshow providing the controlbar and the thumbstrip
+			hs.addSlideshow({
+				//slideshowGroup: 'group1',
+				interval: 2000,
+				repeat: false,
+				useControls: true,
+				overlayOptions: {
+					className: 'text-controls',
+					position: 'bottom center',
+					relativeTo: 'viewport',
+					offsetY: -60
+				},
+				thumbstrip: {
+					position: 'bottom center',
+					mode: 'horizontal',
+					relativeTo: 'viewport'
+				}
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div id="HEADER">
+			<h1><a href="./">%SITETITLE%</a></h1>
+		</div>
+	
+		<div id="MENU">
+			<h2>menu</h2>
+			<ul>
+				%MENULOOP%
+			</ul>
+		</div>
+	
+		<div id="MAIN">
+			<div class="text">
+				<div style="border-bottom:2px dotted #483d8b;line-height:1.2;margin:0 0 1em;padding:0.1em 0.5em;">
+					%BACKPAGE%
+					<span style="color:#483d8b;font-size:170%;margin:0 0.3em">%PAGETITLE%</span>
+					%NEXTPAGE%
+				</div>
+				%MAINLOOP%
+			</div>
+		</div>
+	</body>
+
+</html>

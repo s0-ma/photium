@@ -1,0 +1,67 @@
+@import url(http://reset5.googlecode.com/hg/reset.min.css);
+@import url(http://fonts.googleapis.com/css?family=Lily+Script+One);
+
+html {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	margin: 0;
+	padding-top: 70px;
+}
+
+body, #MENU, #MAIN {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	height: 100%;
+	overflow: auto;
+}
+
+#HEADER{
+	background-color: #ccc;
+	height: 70px;
+	margin-top: -70px;
+}
+#MENU {
+	float: left;
+	width: 15%;
+}
+
+#MAIN {
+	float: right;
+	width: 85%;
+}
+
+a{
+	color:#222;
+	text-decoration:none;
+}
+
+a:hover,a:active{
+	color:#666;
+}
+
+h1{
+	font-family: 'Lily Script One', cursive;
+	font-size:40px;
+	padding-left:20px;
+	padding-top:12px;
+}
+
+#MENU h2{
+	font-size:20px;
+	line-height:25px;
+}
+
+#MENU ul{
+	padding-left:8px;
+	line-height:20px;
+	border-top:1px solid #333333;
+}
+#MENU li{
+	border-bottom:1px solid #333333;
+}
+#MAIN .text{
+	padding-left:8px;
+}
