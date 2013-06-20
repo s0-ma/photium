@@ -1,4 +1,4 @@
 #!/bin/bash
 
-IMGPATH="/home/tatsuya/Pictures/public"
-python init.py `find $IMGPATH -name "*" -follow`
+IMGPATH="/var/samba/Pictures"
+python init.py `find $IMGPATH -name "*" -follow | grep -v "\/\."`

@@ -172,13 +172,13 @@ def makeThumb():
 
 				try:
 					exif = EXIF.process_file(open(fileInfo[1]),details=False,stop_tag=u"Image Orientation")
-					if unicode(exif["Image Orientation"]) == u"Rotated 90 CW":
-						imgS.orientate(1)
-						newImgL.orientate(1)
-					elif unicode(exif["Image Orientation"]) == u"Rotated 90 CCW":
+					if unicode(exif["Image Orientation"]).find(u"Rotated 90 CW") != -1:
 						imgS.orientate(3)
 						newImgL.orientate(3)
-					elif unicode(exif["Image Orientation"]) == u"Rotated 180":
+					elif unicode(exif["Image Orientation"]).find(u"Rotated 90 CCW") != -1:
+						imgS.orientate(1)
+						newImgL.orientate(1)
+					elif unicode(exif["Image Orientation"]).find(u"Rotated 180") != -1:
 						imgS.orientate(2)
 						newImgL.orientate(2)
 				except:

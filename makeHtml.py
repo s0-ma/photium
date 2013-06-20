@@ -29,7 +29,7 @@ def makeHtml(page,tag):
 			pictureList = pictureDB.fetchall()
 			#ファイルの存在しないディレクトリへのアクセスの場合
 			if len(pictureList)==0:
-				sys.exit()
+				pass
 		except:
 			sys.exit()
 
